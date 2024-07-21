@@ -170,7 +170,12 @@ make
 ## 3- Write Solidity Project
 ### 3-1 Create directory
 ```console
+cd ~
 mkdir typescript-wasm-project
+
+mkdir -p ~/typescript-wasm-project/greeting/bin
+cp ~/greeting/target/wasm32-unknown-unknown/release/greeting.wasm ~/typescript-wasm-project/greeting/bin/
+
 cd typescript-wasm-project
 npm init -y
 ```
