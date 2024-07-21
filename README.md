@@ -481,5 +481,7 @@ pnpm hardhat get-greeting --contract 0x...
 ```
 ![Screenshot_8](https://github.com/user-attachments/assets/b3a2439a-31bd-401b-9821-97aeebe82349)
 
+### Check your address in explorer
+https://blockscout.dev.thefluent.xyz/
 
 
