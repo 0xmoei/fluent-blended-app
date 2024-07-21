@@ -6,7 +6,7 @@ Recently, Fluent introduced supporting real-time composability across apps from 
 
 Contracts deployed in Solidity, Typescript, and Rust (Wasm and Solana Rust) can now compose without friction. No bridging between networks or switching wallets.
 
-### In this guide, we deploy a Blended app on Fluent Devnet. The application consists of a Rust smart contract that prints "Hello" and a Solidity smart contract that prints "World." 
+### In this guide, we deploy a Blended app consisting of a Rust smart contract that prints "Hello" and a Solidity smart contract that prints "World." on Fluent Devnet.
 
 * [Twitter](https://x.com/fluentxyz)
 * [Discord](https://discord.com/invite/fluentlabs)
