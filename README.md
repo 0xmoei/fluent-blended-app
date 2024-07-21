@@ -186,8 +186,11 @@ npm install --save-dev typescript ts-node hardhat hardhat-deploy ethers dotenv @
 pnpm add ethers@^5.7.2 @nomiclabs/hardhat-ethers@2.0.6
 pnpm install
 npx hardhat
-# Follow the prompts to create a basic Hardhat project.
 ```
+> Follow the prompts to create a basic TypeScript project.
+>
+> ![Screenshot_5](https://github.com/user-attachments/assets/98051ac9-8819-46db-ad22-f2a225aa1a43)
+>
 
 ### 3-3 Configure TypeScript and Hardhat
 ```console
