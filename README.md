@@ -210,7 +210,7 @@ npx hardhat
 rm hardhat.config.ts && nano hardhat.config.ts
 ```
 
-Paste this code
+Paste this code and replace your metamask privatekey with `your-private-key`
 ```console
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
