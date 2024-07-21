@@ -337,7 +337,7 @@ contract GreetingWithWorld {
 ## 4- Deploy Contracts by Hardhat
 ### 4-1 Create deploy contract
 ```console
-mdkir deploy && nano deploy/01_deploy_contracts.ts
+mkdir deploy && nano deploy/01_deploy_contracts.ts
 ```
 
 Paste this code:
