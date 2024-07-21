@@ -48,7 +48,7 @@ cd greeting
 
 ### 2-2 Configure the Rust Project
 ```console
-nano Cargo.toml
+rm -rf Cargo.toml && nano Cargo.toml
 ```
 
 Paste this code
