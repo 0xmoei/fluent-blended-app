@@ -194,7 +194,7 @@ npx hardhat
 
 ### 3-3 Configure TypeScript and Hardhat
 ```console
-rm hardhat.config.ts && nano hardhat.config.ts
+rm hardhat.config.js && nano hardhat.config.js
 ```
 
 Paste this code
