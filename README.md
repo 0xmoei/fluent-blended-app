@@ -194,42 +194,50 @@ npx hardhat
 
 ### 3-3 Configure TypeScript and Hardhat
 ```console
-rm hardhat.config.js && nano hardhat.config.js
+rm hardhat.config.ts && nano hardhat.config.ts
 ```
 
 Paste this code
 ```console
-import { HardhatUserConfig } from "hardhat/types";
-import "hardhat-deploy";
+import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import "./tasks/greeting"
+import "hardhat-deploy";
+import * as dotenv from "dotenv";
+import "./tasks/get-greeting"; 
+import "@nomiclabs/hardhat-ethers"; 
 
-require("dotenv").config();
-
-const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY || "";
+dotenv.config();
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "localhost",
+  defaultNetwork: "dev",
   networks: {
-    localhost: {
-      url: "https://rpc.dev.thefluent.xyz/",
-      accounts: [DEPLOYER_PRIVATE_KEY],
-      chainId : 20993,
-    },
     dev: {
-      url: "https://rpc.dev.thefluent.xyz/",
-      accounts: [DEPLOYER_PRIVATE_KEY],
-      chainId : 20993,
+      url: process.env.RPC_URL || "https://rpc.dev.thefluent.xyz/",
+      accounts: [process.env.DEPLOYER_PRIVATE_KEY || "your-private-key"],
+      chainId: 20993,
     },
   },
   solidity: {
-    version: "0.8.24",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
+    compilers: [
+      {
+        version: "0.8.20",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
-    },
+      {
+        version: "0.8.24",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+    ],
   },
   namedAccounts: {
     deployer: {
@@ -256,8 +264,7 @@ Paste this code
   "scripts": {
     "compile": "npx hardhat compile",
     "deploy": "npx hardhat deploy"
-  }
-  ,
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
@@ -340,7 +347,7 @@ contract GreetingWithWorld {
 mkdir deploy && nano deploy/01_deploy_contracts.ts
 ```
 
-Paste this code:
+Paste this code: Replace your metamask private key with `your-private-key`
 ```console
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
