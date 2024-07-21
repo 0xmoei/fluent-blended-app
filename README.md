@@ -1,3 +1,16 @@
+<h1 align="center">Deploy Blended Application on Fluent Devnet</h1>
+
+![GOMRAdtWsAAP2Zq](https://github.com/user-attachments/assets/55683b7b-fd3f-411b-bff7-01dd0bbd2d68)
+
+Recently, Fluent introduced supporting real-time composability across apps from multiple VMs (zkWASM, SVM, EVM), where each app is a first class citizen of the network.
+
+Contracts deployed in Solidity, Typescript, and Rust (Wasm and Solana Rust) can now compose without friction. No bridging between networks or switching wallets.
+
+In this guide, we deploy a Blended app on Fluent Devnet. The application consists of a Rust smart contract that prints "Hello" and a Solidity smart contract that prints "World." 
+
+* [Twitter](https://x.com/fluentxyz)
+* [Discord](https://discord.com/invite/fluentlabs)
+
 ## 1- Install Dependecies
 ```console
 # Update Packages
