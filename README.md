@@ -466,13 +466,20 @@ pnpm hardhat deploy
 ```
 Save `contract deployed at:` address
 
+
 ```console
 pnpm hardhat compile
 
 pnpm hardhat deploy
+```
 
-# Replace 0x... with the address you copied
+![Screenshot_7](https://github.com/user-attachments/assets/5bd619c2-2536-430f-9388-0f588756af58)
+
+Replace 0x... with GreetingWithWorld contract deployed at
+```console
 pnpm hardhat get-greeting --contract 0x...
 ```
+![Screenshot_8](https://github.com/user-attachments/assets/b3a2439a-31bd-401b-9821-97aeebe82349)
+
 
 
